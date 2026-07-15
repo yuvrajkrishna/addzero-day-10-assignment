@@ -1,17 +1,27 @@
-#include<stdio.h>
-int main ( ) {
+#include <stdio.h>
 
-    int n = 5 ;
+int main() {
 
-    for(int i = 1 ; i <= 2*n-1;  i++){
-        int star = i;
-        if(star > n ){
-            star = 2 * n  - i ;
-        }
-        for(int j = 1 ; j <=star ; j++){
-            printf("%d ",j);
+    int n = 5;
+    int row = n;
+
+    // Increasing
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= i; j++) {
+            printf("%d ", j);
         }
         printf("\n");
+    }
+
+    row--;
+
+    // Decreasing
+    while(row >= 1) {
+        for(int j = 1; j <= row; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+        row--;
     }
 
     return 0;
